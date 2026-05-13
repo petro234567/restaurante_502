@@ -4,11 +4,13 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <title>Login | Gestión de restaurante </title>
+    <title>Login | Gestión de restaurante</title>
 
     <link rel="stylesheet" href="{% static 'gestion/login.css' %}">
+
 </head>
 
 <body>
@@ -28,26 +30,39 @@
             {% csrf_token %}
 
             <div class="input-group">
+
                 <label>Usuario</label>
+
                 {{ form.username }}
+
             </div>
 
             <div class="input-group">
+
                 <label>Contraseña</label>
+
                 {{ form.password }}
+
             </div>
 
             <button type="submit">
+
                 Ingresar
+
             </button>
 
         </form>
 
         <p class="registro-link">
+
             ¿No tienes cuenta?
+
             <a href="{% url 'registro' %}">
+
                 Registrarse
+
             </a>
+
         </p>
 
     </div>

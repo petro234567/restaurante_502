@@ -54,10 +54,16 @@ class Mesa(models.Model):
 
 
 class Plato(models.Model):
+    categorias = [
+        ('Entrada', 'Entrada'),
+        ('Plato Principal', 'Plato Principal'),
+        ('Postre', 'Postre'),
+        ('Bebida', 'Bebida'),
+    ]
     nombre_plato = models.CharField(max_length=100)
     descripcion = models.TextField(blank=True, null=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2)
-    categoria = models.CharField(max_length=50, blank=True, null=True)
+    categoria = models.CharField(max_length=50, choices=categorias, blank=True, null=True)
     disponible = models.BooleanField(default=True)
 
     class Meta:
@@ -134,5 +140,3 @@ class Factura(models.Model):
 
     def __str__(self):
         return f"Factura {self.id} - Orden {self.orden.id}"
-
-
