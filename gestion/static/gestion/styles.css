@@ -1,18 +1,18 @@
 /* =========================
    GENERAL
 ========================= */
- 
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #f4f6f9;
 }
- 
- 
+
+
 /* =========================
    HEADER
 ========================= */
- 
+
 header {
     background-color: #1f2937;
     color: white;
@@ -21,28 +21,28 @@ header {
     font-size: 20px;
     font-weight: bold;
 }
- 
- 
+
+
 /* =========================
    CONTENEDOR PRINCIPAL
 ========================= */
- 
+
 .main {
     display: flex;
 }
- 
- 
+
+
 /* =========================
    SIDEBAR
 ========================= */
- 
+
 .sidebar {
     width: 220px;
     background-color: #111827;
     min-height: 100vh;
     padding-top: 20px;
 }
- 
+
 .sidebar a {
     display: block;
     color: #d1d5db;
@@ -50,62 +50,62 @@ header {
     text-decoration: none;
     transition: 0.3s;
 }
- 
+
 .sidebar a:hover {
     background-color: #374151;
     color: white;
 }
- 
- 
+
+
 /* =========================
    CONTENIDO
 ========================= */
- 
+
 .contenido {
     flex: 1;
     padding: 20px;
 }
- 
+
 .contenedor {
     background: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
- 
- 
+
+
 /* =========================
    TABLAS
 ========================= */
- 
+
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
 }
- 
+
 table,
 th,
 td {
     border: none;
 }
- 
+
 th {
     background-color: #e5e7eb;
     padding: 12px;
     text-align: left;
 }
- 
+
 td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
- 
- 
+
+
 /* =========================
    CARDS
 ========================= */
- 
+
 .card {
     display: inline-block;
     width: 200px;
@@ -117,20 +117,20 @@ td {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
- 
+
 .card:hover {
     transform: scale(1.05);
 }
- 
- 
+
+
 /* =========================
    FORMULARIOS
 ========================= */
- 
+
 form {
     margin-top: 20px;
 }
- 
+
 .input,
 input,
 select,
@@ -144,18 +144,18 @@ textarea {
     box-sizing: border-box;
     font-size: 14px;
 }
- 
+
 label {
     font-weight: bold;
 }
- 
- 
+
+
 /* =========================
    BOTONES
 ========================= */
- 
+
 button,
- 
+
 .btn-estandar {
     display: inline-block;
     padding: 10px 15px;
@@ -166,11 +166,11 @@ button,
     margin-left: 10px;
     transition: 0.3s;
 }
- 
+
 .btn-estandar:hover {
     background-color: #2563eb;
 }
- 
+
 .btn-cancelar {
     display: inline-block;
     padding: 10px 15px;
@@ -181,11 +181,11 @@ button,
     margin-left: 10px;
     transition: 0.3s;
 }
- 
+
 .btn-cancelar:hover {
     background-color: #4b5563;
 }
- 
+
 .btn-eliminar {
     display: inline-block;
     padding: 10px 15px;
@@ -196,121 +196,148 @@ button,
     margin-left: 10px;
     transition: 0.3s;
 }
- 
+
 .btn-eliminar:hover {
     background-color: #ae0000;
 }
- 
+
 /* =========================
    MENSAJES
 ========================= */
- 
+
 /* CONTENEDOR MENSAJES */
- 
+
 .mensaje {
- 
+
     position: relative;
- 
+
     padding: 15px 20px;
- 
+
     margin-bottom: 15px;
- 
+
     border-radius: 12px;
- 
+
     color: white;
- 
+
     font-weight: 600;
- 
+
     font-size: 14px;
- 
+
     animation: aparecer 0.4s ease;
- 
+
     box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
- 
+
     overflow: hidden;
 }
- 
+
 /* LINEA DECORATIVA */
- 
+
 .mensaje::before {
- 
+
     content: "";
- 
+
     position: absolute;
- 
+
     left: 0;
- 
+
     top: 0;
- 
+
     width: 6px;
- 
+
     height: 100%;
 }
- 
+
 /* SUCCESS */
- 
+
 .success {
- 
+
     background: #22c55e;
 }
- 
+
 .success::before {
- 
+
     background: #15803d;
 }
- 
+
 /* ERROR */
- 
+
 .error {
- 
+
     background: #ef4444;
 }
- 
+
 .error::before {
- 
+
     background: #991b1b;
 }
- 
+
 /* WARNING */
- 
+
 .warning {
- 
+
     background: #f59e0b;
 }
- 
+
 .warning::before {
- 
+
     background: #b45309;
 }
- 
+
 /* INFO */
- 
+
 .info {
- 
+
     background: #3b82f6;
 }
- 
+
 .info::before {
- 
+
     background: #1d4ed8;
 }
- 
+
 /* ANIMACION */
- 
+
 @keyframes aparecer {
- 
+
     from {
- 
+
         opacity: 0;
- 
+
         transform: translateY(-15px);
     }
- 
+
     to {
- 
+
         opacity: 1;
- 
+
         transform: translateY(0);
     }
 }
- 
+
+.estado-facturada {
+
+    background-color: #16a34a;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.estado-pendiente {
+
+    background-color: #f59e0b;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn-bloqueado {
+
+    background-color: #9ca3af;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: not-allowed;
+}
